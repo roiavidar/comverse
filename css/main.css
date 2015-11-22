@@ -85,21 +85,14 @@ ul {
     width: 100%;
 }
 
-.HomepageHeader {
-    width: 95%;
-    height: 100px;
-    text-align: justify;
-    margin: 0 auto;
-}
-
-.HomepageHeader:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-}
-
 .ImportantText {
     font-weight: 600;
+}
+
+.HomepageHeader-container {
+    width: 95%;
+    margin: 0 auto;
+    height: 100px;
 }
 
 .GraySquareButton {
@@ -113,10 +106,8 @@ ul {
 
 .SearchInputBox {
     visibility: hidden;
-    width: 300px;
+    width: 100%;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     top: 70px;
 }
 
@@ -135,9 +126,73 @@ ul {
     text-align: center;
 }
 
-.CheckBoxSearch {
+.CheckBoxHackLocation {
     position: absolute;
     left: -99999px;
+}
+
+.MenuList-SubMenu {
+    display: none;
+}
+
+.CheckBoxSubMenuNewsAndMedia:checked~.MenuList-SubMenu {
+    display: block;
+}
+
+.Menu {
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 0px;
+}
+
+#Menu:checked~.MenuContainer {
+    display: block;
+}
+
+.MenuContainer {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    z-index: 200;
+    background: white;
+    text-align: left;
+    border-left: 1px solid #DBDBDB;
+    border-right: 1px solid #DBDBDB;
+    display: none;
+}
+
+.ExpendableListItem:before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 8px;
+    background: url('../img/navCollapseArrowRight.png');
+    position: absolute;
+    top: 13px;
+    left: 5px;
+}
+
+.MenuList > li {
+    border-bottom: 1px solid #DBDBDB;
+    position: relative;
+}
+
+.ListItemText {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+}
+
+.MenuList a {
+    text-decoration: none;
+}
+
+.MenuList-SubMenu > li {
+    border-top: 1px solid #DBDBDB;
 }
 
 .SmallGraySquareButton {

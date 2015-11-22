@@ -7,15 +7,33 @@
 </head>
 <body>
     <div class="Wrapper">
-        <header id="PageHeader" class="HomepageHeader u-posRelative" role="banner">
-            <button class="GraySquareButton"><img src="img/hamburger-icon.png" alt="hamburger menu"></button>
-            <img src="img/comverse-logo.png" class="u-verticalAlignBottom" alt="comverse">
-            <label for="search" class="SearchLabel"></label>
-            <button class="GraySquareButton">
+        <header id="PageHeader" class="u-posRelative" role="banner">
+            <div class="u-posRelative HomepageHeader-container u-justify">
+            <label for="Menu" class="u-posAbsolute Menu"></label>
+                <button class="GraySquareButton"><img src="img/hamburger-icon.png" alt="hamburger menu"></button>
+                <img src="img/comverse-logo.png" class="u-verticalAlignBottom" alt="comverse">
+                <label for="search" class="SearchLabel"></label>
+                <button class="GraySquareButton">
                     <img src="img/searchBtnMobile.png" alt="search">
-            </button>
-            <input type="checkbox" class="CheckBoxSearch" id="search">
+                </button>
+            </div>
+            <input type="checkbox" class="CheckBoxSearch CheckBoxHackLocation" id="search">
             <input type="search" name="searchBox" class="SearchInputBox">
+            <input type="checkbox" id="Menu" class="CheckBoxHackLocation">
+            <div class="MenuContainer">
+                <ul class="MenuList">
+                    <li class="ExpendableListItem">
+                        <label for="newsAndMedia"><div class="ListItemText">NEWS & MEDIA</div></label>
+                        <input type="checkbox" class="CheckBoxHackLocation CheckBoxSubMenuNewsAndMedia" id="newsAndMedia">
+                        <ul class="MenuList-SubMenu">
+                            <li><a href=""><div class="ListItemText">SMART MONITERZATION</div></a></li>
+                            <li><a href=""><div class="ListItemText">CUSTOMER EVOLUTION</div></a></li>
+                        </ul>
+                    </li>
+                    <li class="ExpendableListItem"><a href=""><div class="ListItemText">ABOUT US(NOT EXPANDABLE)</div></a></li>
+                    <li class="ExpendableListItem"><a href=""><div class="ListItemText">CONTACT US(NOT EXPANDABLE)</div></a></li>
+                </ul>
+            </div>
         </header>
         <main>
             <div class="ColoredSection ColoredSection--blue">
