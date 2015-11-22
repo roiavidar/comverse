@@ -1,2 +1,662 @@
-div {
+/* to add content box inherit and stuff */
+
+/* Baseline */
+
+html,body {
+    box-sizing: border-box;
 }
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,h2,h3,ul,p,blockquote{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+    margin-top: 150px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+
+.u-verticalAlignBottom {
+    vertical-align: bottom;
+}
+
+.u-alignMiddle {
+    vertical-align: middle;
+}
+
+.u-removeMarginTop {
+    margin-top: 0;
+}
+
+.u-normalWeight {
+    font-weight: 400;
+}
+
+.u-posAbsolute {
+    position: absolute;
+}
+
+.u-posRelative {
+    position: relative;
+}
+
+.u-inlineBlock {
+    display: inline-block;
+}
+
+.u-overflowHidden {
+    overflow: hidden;
+}
+
+.u-justify {
+    text-align: justify;
+}
+
+.u-justify:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+}
+
+.u-justify > * {
+    display: inline-block;
+}
+
+/* Modules */
+
+.Wrapper {
+    width: 100%;
+}
+
+.HomepageHeader {
+    width: 95%;
+    height: 100px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.HomepageHeader:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.ImportantText {
+    font-weight: 600;
+}
+
+.GraySquareButton {
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 7px 5px;
+    border: 1px solid #dddddd;
+    width: 50px;
+    height: 50px;
+}
+
+.SearchInputBox {
+    visibility: hidden;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70px;
+}
+
+.CheckBoxSearch:checked~.SearchInputBox {
+    visibility: visible;
+}
+
+.SearchLabel {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+}
+
+.SearchBoxContainer {
+    text-align: center;
+}
+
+.CheckBoxSearch {
+    position: absolute;
+    left: -99999;
+}
+
+.SmallGraySquareButton {
+    background: #e5e5e5;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    border: 0px none;
+}
+
+.SmallGraySquareButton:hover {
+    background: #2892c9;
+    color: white;
+}
+
+.CarouselNavigationButtons > li{
+    display: inline;
+}
+
+.CarouselNavigationButtons {
+    position: absolute;
+    top: 185px;
+    left: 15px;
+}
+
+.ColoredSection {
+    width: 100%;
+    height: 175px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.ColoredSection--blue {
+    background: #4f96c3;
+    opacity: 0.9;
+    position: absolute;
+    top: -152px;
+    z-index: 100;
+}
+
+.ColoredSection--pink {
+    background: #d13a85;
+}
+
+.ColoredSection--green {
+    background: #69c33c;
+}
+
+.ColoredSection--orange {
+    background: #fe7418;
+}
+
+ul > .ColoredSection {
+    margin: 10px 0;
+}
+
+.ColoredSection-promotionItemArrow:after {
+    content: '';
+    background: url(../img/promotion-item-arrow.png);
+    width: 11px;
+    height: 17px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+}
+
+.MainSectionBackground {
+    background-image: url("../img/bg-mobile.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 250px;
+    position: relative;
+}
+
+.RectangleBlueButton {
+    background-color: #1489c4;
+    width: 150px;
+    height: 35px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.RectangleBlueButton:after {
+    content: '';
+    background-image: url("../img/btnArrow.png");
+    width: 10px;
+    height: 13px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.RectangleBlueButton--inMainSection {
+ position: absolute;
+ left: 15px;
+ top: 35px;
+}
+
+.RectangleBlueButton--big {
+    width: 200px;
+    height: 50px;
+}
+
+.BoldLink {
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    font-weight: 600;
+    position: absolute;
+    bottom: 10px;
+}
+
+.MoreIcon--left {
+    padding-right: 10px;
+}
+
+.SolutionSection {
+    background: #2f8ebe;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.SolutionList {
+    margin: 20px auto 0;
+    max-width: 600px;
+}
+
+.SolutionList > li {
+    display: inline-block;
+    width: 151px;
+    position: relative;
+}
+
+.SolutionHover:after {
+    content: '';
+    display: inline-block;
+    width: 142px;
+    height: 63px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.BizAnalitic:hover:after {
+    background-image: url(../img/solution_icon_biz-analitics_hover.png);
+}
+
+.BizTransform:hover:after {
+    background-image: url(../img/solution_icon_biz-transform_hover.png);
+}
+
+.DitiCx:hover:after {
+    background-image: url(../img/solution_icon_diti-cx_hover.png);
+}
+
+.OptimizeEfficient:hover:after {
+    background-image: url(../img/solution_icon_optimize-efficnt_hover.png);
+}
+
+.Personal:hover:after {
+    background-image: url(../img/solution_icon_personal_hover.png);
+}
+
+.SmartMoney:hover:after {
+    background-image: url(../img/solution_icon_smart-money_hover.png);
+}
+
+.NewsAndEventsSection {
+    background-image: url(../img/whats_happening_mobile.jpg);
+    background-size: 100% 100%;
+    color: white;
+    padding: 10px;
+}
+
+.NewsAndEventsSection-HeadLine {
+    text-shadow: 0px 0px 30px black;
+    text-align: center;
+}
+
+.NewsAndEventsContainer {
+    color: white;
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+.DateBox {
+    width: 75px;
+    height: 85px;
+    background: #3399cc;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.WhiteContainer {
+    background: rgba(212,212,212,0.8);
+    width: 100%;
+    height: 100px;
+    padding: 7.5px;
+}
+
+.DateBox-day {
+    font-size: 36px;
+}
+
+.DateBox-month {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.DateBox:after {
+    content: '';
+    width: 200px;
+    height: 100px;
+    border: 1px dotted white;
+    position: absolute;
+    top: 52px;
+    left: -50px;
+}
+
+.NewsAndEventText {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+    color: black;
+}
+
+.NewsAndEventTextContainer {
+    display: table;
+    height: 100%;
+}
+
+.NewsAndEventsContainer-SubHeader {
+    margin: 10px 0 5px;
+    text-shadow: 0px 0px 20px black; ;
+}
+
+.NewsAndEventsBackground {
+    padding-left: 30px;
+    background-size: 24px 19px;
+    margin-top: 10px;
+    display:inline-block;
+}
+
+.NewsBackground {
+    background: url('../img/eventListIconNews.png') no-repeat;
+}
+
+.NewsBackground:hover {
+    background: url('../img/eventListIconNews_hover.png') no-repeat;
+}
+
+.EventsBackground {
+    background: url('../img/eventListIconEvents.png') no-repeat;
+}
+
+.EventsBackground:hover {
+    background: url('../img/eventListIconEvents_hover.png') no-repeat;
+}
+
+.BlogBackground {
+    background: url('../img/eventListIconPress.png') no-repeat;
+}
+
+.BlogBackground:hover {
+    background: url('../img/eventListIconPress_hover.png') no-repeat;
+}
+
+.SuccessStoriesSection {
+    background: #ececec;
+    padding-bottom: 50px;
+}
+
+.SuccessStoriesSection-HeadLine {
+    color: black;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+.SucessStoryAtricle {
+    background: white;
+    height: 213px;
+    padding: 25px;
+}
+
+.SuccessStoriesSection-SuccssStoriesContainer {
+    width: 348px;
+    margin: auto;
+    height: 328px;
+}
+
+.StoryQuote {
+    display: inline-block;
+    height: 100px;
+    width: 180px;
+    margin-left: 15px;
+}
+
+.StoryQuote-text {
+    font-size: 14px;
+}
+
+.StoryQuote-text:before {
+    content: '';
+    background: url('../img/quote-grey.png');
+    width: 27px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.StoryQuote-text:after {
+    content: '"';
+}
+
+.SuccessStoryTellerImage {
+    float: left;
+}
+
+.StoryQuote-teller {
+    bottom: 20px;
+    left: 24px;
+}
+
+.SucessStoryAtricle-companyLogo {
+    bottom: 3px;
+    right: 13px;
+    height: 60px;
+}
+
+.SucessStoryAtricle-seperatorLine {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid #f8f8f8;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.StoryQuote-teller-name {
+    color: #7cc4e7;
+    font-style: normal;
+}
+
+.CompaniesList {
+    margin: 10px 0 10px;
+}
+
+.CompaniesList > li {
+    display: inline-block;
+    width: 108px;
+    height: 95px;
+}
+
+.SliderContent {
+    transition: transform 0.5s;
+}
+
+.ImageSliderContentUp:hover {
+    transform: translateY(-95px);
+    line-height: 0px;
+}
+
+.AllStoriesButton {
+    margin: 15px auto 0px;
+    display: block;
+}
+
+.ArticleSliderVisible {
+    height: 213px;
+}
+
+.SuccessStoryFullQuote {
+    height: 213px;
+    width: 100%;
+    background: rgb(58,166,219);
+    color: white;
+    padding: 20px 40px;
+    font-size: 15px;
+    display: table;
+}
+
+.SuccessStoryFullQuote-text:before,
+.SuccessStoryFullQuote-text:after {
+    content: '';
+    background:url("../img/quote-blue.png");
+    display: inline-block;
+    width: 32px;
+    height: 22px;
+}
+
+.SuccessStoryFullQuote-text:before {
+    position: absolute;
+    top: 2px;
+    left: -35px;
+}
+
+.SuccessStoryFullQuote-text:after {
+    position: relative;
+    vertical-align: -10px
+}
+
+.ArticleSliderContentUp:hover {
+    transform: translateY(-213px);
+}
+
+.SuccessStoryFullQuote-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.FooterList {
+    background: url("../img/footer-pattern.jpg") repeat;
+    color: white;
+}
+
+.FooterList > li {
+    border-bottom: 1px solid black;
+    padding: 15px;
+}
+
+.VisitLinksList {
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.VisitLinksList > li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.LinkedinBackground:hover:before,
+.YoutubeBackground:hover:before,
+.TwitterBackground:hover:before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+}
+
+.LinkedinBackground:hover:before {
+    background: url("../img/socialMenuIcon-linkdin_hover.png");
+}
+
+.YoutubeBackground:hover:before {
+    background: url("../img/socialMenuIcon-youtube_hover.png");
+}
+
+.TwitterBackground:hover:before {
+    background: url("../img/socialMenuIcon-twitter_hover.png");
+}
+
+.LanguageSelector {
+    margin-left: 15px;
+    width: 100px;
+    height: 31px;
+}
+
+.SelectLanguageOverlayButton {
+    color: white;
+    position: absolute;
+    width: 100px;
+    height: 32px;
+    background: #414140;
+    border: 0px;
+    text-align: left;
+    top: 14px;
+    left: 192px;
+    pointer-events: none;
+}
+
+.SelectLanguageOverlayButton:after {
+    content: '';
+    background: url("../img/btnArrow.png");
+    display:inline-block;
+    position: absolute;
+    right: 13px;
+    width: 10px;
+    height: 13px;
+    top: 10px;
+    transform: rotate(90deg);
+}
+
+.SmallPrintFooterContainer-text {
+    font-size: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.Seperator {
+    margin: 0 5px;
+}
+
+.SmallPrintFooterContainer {
+    display: table;
+    height: 20px;
+    width: 100%;
+}
+
+.SmallPrintFooterLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.GoToTheTopOfThePage {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+}
+
