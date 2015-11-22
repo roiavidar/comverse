@@ -137,7 +137,7 @@ ul {
 
 .CheckBoxSearch {
     position: absolute;
-    left: -99999;
+    left: -99999px;
 }
 
 .SmallGraySquareButton {
