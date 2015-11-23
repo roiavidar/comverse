@@ -739,6 +739,10 @@ ul > .ColoredSection {
     display: none;
 }
 
+.DesktopFooter {
+    display: none;
+}
+
 @media screen and (min-width: 948px) {
 
     main {
@@ -1175,6 +1179,88 @@ ul > .ColoredSection {
         height: 50px;
         bottom: 0px;
         height: 67px;
+    }
+
+    .MobileFooter {
+        display: none;
+    }
+
+    .DesktopFooter {
+        display: block;
+        width: 948px;
+        margin: auto;
+        height: 350px;
+    }
+
+    .FooterOfHomePage {
+        background: url("../img/footer-pattern.jpg") repeat;
+    }
+
+    .DesktopFooter-List > li {
+        display:inline-block;
+        vertical-align: top;
+        margin-right: 72px;
+    }
+
+    .DesktopFooter-List h4 {
+        margin-bottom:8px;
+    }
+
+    .DesktopFooter-List li a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .DesktopFooter-List li  > a:hover {
+        text-decoration: underline;
+    }
+
+    .DesktopFooter-List {
+        width: 700px;
+        float: left;
+    }
+
+    .BlogAndSubscribe {
+        display: inline-block;
+        float: left;
+        width: 216px;
+        height: 100%;
+        background: rgb(63, 63, 63) none repeat scroll 0% 0%;
+    }
+
+    .SmallPrintFooterContainer-text--Desktop {
+        left: 0px;
+        bottom: 14px;
+    }
+
+    .SmallPrintFooterContainer-text--Desktop  a,
+    .SmallPrintFooterContainer-sperator {
+        text-decoration: none;
+        color: #777777;
+        font-size: 12px;
+    }
+
+    .SmallPrintFooterContainer-sperator {
+        margin: 0 10px;
+    }
+
+    .BlogAndSubscribe-HeadLine {
+        color: #4ea7d3;
+    }
+
+    .BlogAndSubscribe-email{
+        width: 133px;
+    }
+
+    .VisitLinksList {
+        position: absolute;
+        bottom: 5px;
+        margin-left: 0px;
+    }
+
+    .BlogAndSubscribe-blogArticle p {
+        color: white;
     }
 }
 
