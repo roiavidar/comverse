@@ -19,7 +19,7 @@
             </div>
             <input type="checkbox" class="CheckBoxSearch CheckBoxHackLocation" id="search">
             <input type="search" name="searchBox" class="SearchInputBox" maxlength="12">
-            <input type="checkbox" id="Menu" class="CheckBoxHackLocation">
+            <input type="checkbox" id="Menu" class="CheckBoxHackLocation MenuCheckBox">
             <nav class="MenuContainer">
                 <ul class="MenuList">
                     <li class="ExpendableListItem">
@@ -106,15 +106,17 @@
             <p>Comverse policy Studio <strong class="ImportantText">1st</strong> <br> Ever Marketign-Oriented Policy Tool</p>
         </div>
         <div class="MainSectionBackground">
-            <button class="RectangleBlueButton RectangleBlueButton--inMainSection">LEARN MORE</button>
-            <ul class="CarouselNavigationButtons">
-                <li><button class="SmallGraySquareButton">1</button></li>
-                <li><button class="SmallGraySquareButton">2</button></li>
-                <li><button class="SmallGraySquareButton">3</button></li>
-                <li><button class="SmallGraySquareButton">4</button></li>
-            </ul>
+            <div class="MainSectionBackground-ButtonsContainer">
+                <button class="RectangleBlueButton RectangleBlueButton--inMainSection">LEARN MORE</button>
+                <ul class="CarouselNavigationButtons">
+                    <li><button class="SmallGraySquareButton"><span class="SmallGraySquareButton-text">1</span></button></li>
+                    <li><button class="SmallGraySquareButton"><span class="SmallGraySquareButton-text">2</span></button></li>
+                    <li><button class="SmallGraySquareButton"><span class="SmallGraySquareButton-text">3</span></button></li>
+                    <li><button class="SmallGraySquareButton"><span class="SmallGraySquareButton-text">4</span></button></li>
+                </ul>
+            </div>
         </div>
-        <ul>
+        <ul class="ColoredList">
             <li class="ColoredSection ColoredSection--pink">
                 <article class="ColoredSection-promotionItemArrow">
                     <h2 class="u-normalWeight">Comverse Is Value-Added <br> Service Global Market <br> Leader.</h2>
@@ -143,12 +145,16 @@
             <li><span class="OptimizeEfficient SolutionHover u-posRelative u-inlineBlock"><img src="img/solution_icon_optimize-efficnt.png" alt="optimize efficent"></span><span>Cloud computing</span></li>
             <li><span class="Personal SolutionHover u-posRelative u-inlineBlock"><img src="img/solution_icon_personal.png" alt="key"></span><span>Managed services</span></li>
             <li><span class="SmartMoney SolutionHover u-posRelative u-inlineBlock"><img src="img/solution_icon_smart-money.png" alt="smart money"></span><span>Social media</span></li>
-            <li><span class="BizTransform SolutionHover u-posRelative u-inlineBlock"><img src="img/solution_icon_biz-transform.png" alt="biz transform"></span><span>See all solutions</span></li>
+            <li class="MachineToMachineListItem"><span class="MachineToMachine SolutionHover u-posRelative u-inlineBlock"><img src="img/solution_icon_biz-transform.png" alt="machine to machine"></span><span>M2M</span></li>
+            <li>
+                <span class="AllSolutions SolutionHover u-posRelative u-inlineBlock"><img src="img/solution_icon_biz-transform.png" alt="biz transform"></span><span>See all solutions</span>
+                <button class="AllSolutionsButton RectangleBlueButton RectangleBlueButton--big">See all of our solutions</button>
+            </li>
         </ul>
     </section>
     <section class="NewsAndEventsSection">
         <h2 class="NewsAndEventsSection-HeadLine u-normalWeight">WHAT'S HAPPENING AT COMVERSE?</h2>
-        <ul>
+        <ul class="NewsAndEventsList">
             <li>
                 <article class="NewsAndEventsContainer">
                     <h3 class="NewsAndEventsContainer-SubHeader">NEWS</h3>
@@ -204,91 +210,129 @@
     </section>
     <section class="SuccessStoriesSection">
         <h2 class="SuccessStoriesSection-HeadLine u-normalWeight">SUCCESS STORIES</h2>
-        <div class="SuccessStoriesSection-SuccssStoriesContainer">
-            <div class="u-overflowHidden ArticleSliderVisible">
-                <div class="SliderContent ArticleSliderContentUp">
-                    <article class="SucessStoryAtricle u-posRelative">
-                        <img class="SuccessStoryTellerImage" src="img/CB-JP-face.png" alt="CEO">
-                        <blockquote class="StoryQuote" cite="http://example.com/review">
-                            <p class="StoryQuote-text">We have very good and very warm relations with Comverse. We always achievet...</p>
-                            <footer class="StoryQuote-teller u-posAbsolute">
-                                <cite class="StoryQuote-teller-name">SERGEY KOROTYCH</cite> <br>
-                                Deputy CTO, 3 Mob Ukraine
-                            </footer>
-                        </blockquote>
-                        <hr class="SucessStoryAtricle-seperatorLine">
-                        <img class="SucessStoryAtricle-companyLogo u-posAbsolute" src="img/3mob_w108px_X_h95px.jpg" alt="company Mob 3">
-                    </article>
-                    <div class="SuccessStoryFullQuote">
-                        <blockquote class="SuccessStoryFullQuote-text u-posRelative">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis sequi quasi consequuntur dolor autem harum maiores voluptate, eos ad provident cupiditate molestiae, dolorum culpa debitis porro esse officiis dolorem.
-                        </blockquote>
+        <div class="SuccessStoriesSection-container">
+            <div class="SuccessStoriesSection-SuccssStoriesContainer">
+                <div class="u-overflowHidden ArticleSliderVisible">
+                    <div class="SliderContent ArticleSliderContentUp">
+                        <article class="SucessStoryAtricle u-posRelative">
+                            <img class="SuccessStoryTellerImage" src="img/CB-JP-face.png" alt="CEO">
+                            <blockquote class="StoryQuote" cite="http://example.com/review">
+                                <p class="StoryQuote-text">We have very good and very warm relations with Comverse. We always achievet...</p>
+                                <footer class="StoryQuote-teller u-posAbsolute">
+                                    <cite class="StoryQuote-teller-name">SERGEY KOROTYCH</cite> <br>
+                                    Deputy CTO, 3 Mob Ukraine
+                                </footer>
+                            </blockquote>
+                            <hr class="SucessStoryAtricle-seperatorLine">
+                            <img class="SucessStoryAtricle-companyLogo u-posAbsolute" src="img/3mob_w108px_X_h95px.jpg" alt="company Mob 3">
+                        </article>
+                        <div class="SuccessStoryFullQuote">
+                            <blockquote class="SuccessStoryFullQuote-text u-posRelative">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis sequi quasi consequuntur dolor autem harum maiores voluptate, eos ad provident cupiditate molestiae, dolorum culpa debitis porro esse officiis dolorem.
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
+                <ul class="CompaniesList u-justify">
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/upc_w108px_X_h95px.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo"
+                        </div>
+                    </li>
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <ul class="CompaniesList u-justify">
-                <li class="u-overflowHidden">
-                    <div class="SliderContent ImageSliderContentUp u-posRelative">
-                        <img src="img/Tata_Sky_w108px_X_h95px.jpg" alt="company logo">
-                        <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
-                    </div>
-                </li>
-                <li class="u-overflowHidden">
-                    <div class="SliderContent ImageSliderContentUp u-posRelative">
-                        <img src="img/upc_w108px_X_h95px.jpg" alt="company logo">
-                        <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo"
-                    </div>
-                </li>
-                <li class="u-overflowHidden">
-                    <div class="SliderContent ImageSliderContentUp u-posRelative">
-                        <img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="company logo">
-                        <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="SuccessStoriesSection-SuccssStoriesContainer">
-            <div class="u-overflowHidden ArticleSliderVisible">
-                <div class="SliderContent ArticleSliderContentUp">
-                    <article class="SucessStoryAtricle u-posRelative">
-                        <img class="SuccessStoryTellerImage" src="img/JT-GM-face.png" alt="CIO">
-                        <blockquote class="StoryQuote" cite="http://example.com/review">
-                            <p class="StoryQuote-text">We have very good and very warm relations with Comverse. We always achievet...</p>
-                            <footer class="StoryQuote-teller u-posAbsolute">
-                                <cite class="StoryQuote-teller-name">ADALE KEHASSAN</cite> <br>
-                                CIO of Multi-links
-                            </footer>
-                        </blockquote>
-                        <hr class="SucessStoryAtricle-seperatorLine">
-                        <img class="SucessStoryAtricle-companyLogo u-posAbsolute" src="img/multilinks.jpg" alt="company multilinks">
-                    </article>
-                    <div class="SuccessStoryFullQuote">
-                        <blockquote class="SuccessStoryFullQuote-text u-posRelative">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis sequi quasi consequuntur dolor autem harum maiores voluptate, eos ad provident cupiditate molestiae, dolorum culpa debitis porro esse officiis dolorem.
-                        </blockquote>
+            <div class="SuccessStoriesSection-SuccssStoriesContainer">
+                <div class="u-overflowHidden ArticleSliderVisible UpSideDownSuccessStoryContainer">
+                    <div class="SliderContent ArticleSliderContentUp">
+                        <article class="SucessStoryAtricle u-posRelative">
+                            <img class="SuccessStoryTellerImage" src="img/JT-GM-face.png" alt="CIO">
+                            <blockquote class="StoryQuote" cite="http://example.com/review">
+                                <p class="StoryQuote-text">We have very good and very warm relations with Comverse. We always achievet...</p>
+                                <footer class="StoryQuote-teller u-posAbsolute">
+                                    <cite class="StoryQuote-teller-name">ADALE KEHASSAN</cite> <br>
+                                    CIO of Multi-links
+                                </footer>
+                            </blockquote>
+                            <hr class="SucessStoryAtricle-seperatorLine">
+                            <img class="SucessStoryAtricle-companyLogo u-posAbsolute" src="img/multilinks.jpg" alt="company multilinks">
+                        </article>
+                        <div class="SuccessStoryFullQuote">
+                            <blockquote class="SuccessStoryFullQuote-text u-posRelative">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias corporis sequi quasi consequuntur dolor autem harum maiores voluptate, eos ad provident cupiditate molestiae, dolorum culpa debitis porro esse officiis dolorem.
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
+                <ul class="CompaniesList UpSideDownSuccessStoryContainer u-justify">
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/Kyivstarw_w108px_X_h95.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/play_w108px_X_h95px.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/mts_w108px_X_h95px.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <ul class="CompaniesList u-justify">
-                <li class="u-overflowHidden">
-                    <div class="SliderContent ImageSliderContentUp u-posRelative">
-                        <img src="img/Kyivstarw_w108px_X_h95.jpg" alt="company logo">
-                        <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+            <div class="SuccessStoriesSection-SuccssStoriesContainer HalfSucessStoriesContainer u-disNone">
+                <div class="u-overflowHidden ArticleSliderVisible">
+                    <div class="SliderContent ArticleSliderContentUp">
+                        <article class="SucessStoryAtricle u-posRelative">
+                            <blockquote class="StoryQuote" cite="http://example.com/review">
+                                <p class="StoryQuote-text">We have very good and very warm relations with Comverse. We always achievet...</p>
+                                <footer class="StoryQuote-teller u-posAbsolute">
+                                    <cite class="StoryQuote-teller-name">RAVISHANKER</cite> <br>
+                                    Tada Sky CIO N.
+                                </footer>
+                            </blockquote>
+                            <hr class="SucessStoryAtricle-seperatorLine">
+                            <img class="SucessStoryAtricle-companyLogo u-posAbsolute" src="img/Tata_Sky_w108px_X_h95px.jpg" alt="company multilinks">
+                        </article>
+                        <div class="SuccessStoryFullQuote">
+                            <blockquote class="SuccessStoryFullQuote-text u-posRelative">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolore ab dicta ipsum, voluptatem magnam?
+                            </blockquote>
+                        </div>
                     </div>
-                </li>
-                <li class="u-overflowHidden">
-                    <div class="SliderContent ImageSliderContentUp u-posRelative">
-                        <img src="img/play_w108px_X_h95px.jpg" alt="company logo">
-                        <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
-                    </div>
-                </li>
-                <li class="u-overflowHidden">
-                    <div class="SliderContent ImageSliderContentUp u-posRelative">
-                        <img src="img/mts_w108px_X_h95px.jpg" alt="company logo">
-                        <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
-                    </div>
-                </li>
-            </ul>
+                </div>
+                <ul class="CompaniesList u-justify">
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/Kyivstarw_w108px_X_h95.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                    <li class="u-overflowHidden">
+                        <div class="SliderContent ImageSliderContentUp u-posRelative">
+                            <img src="img/play_w108px_X_h95px.jpg" alt="company logo">
+                            <img src="img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg" alt="video logo">
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <button class="RectangleBlueButton RectangleBlueButton--big AllStoriesButton">All 256 Succsses Stories</button>
     </section>
