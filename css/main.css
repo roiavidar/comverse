@@ -1262,6 +1262,42 @@ ul > .ColoredSection {
     .BlogAndSubscribe-blogArticle p {
         color: white;
     }
+
+    .BlogAndSubscribe-HeadLine {
+        text-align: center;
+    }
+
+    .blogArticle-date b {
+        font-size: 42px;
+        top: 8px;
+        position: relative;
+    }
+
+    .blogArticle-date span {
+        font-size: 30px;
+        clear: left;
+        display: block;
+    }
+
+    .blogArticle-date {
+        float: left;
+        text-align: center;
+        position: relative;
+        top: -19px;
+    }
+
+    .blogArticle-text {
+        position: relative;
+        left: 10px;
+    }
+
+    .BlogAndSubscribe-blogArticle hr{
+        color: rgb(106, 106, 106);
+        margin-top: 27px;
+        width: 100%;
+        position: relative;
+        right: 52px;
+    }
 }
 
 
